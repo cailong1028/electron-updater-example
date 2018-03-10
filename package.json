@@ -5,29 +5,56 @@
   "description": "electron-updater example project",
   "author": "Matt Haggard",
   "scripts": {
+    "start": "webpack --progress && set NODE_ENV=development&& electron ./app/main.js",
     "publish_origin": "build -p always",
     "publish1": "build --dir -w",
     "publish2": "build --pd=./dist/win-unpacked",
-    "electron-start": "set NODE_ENV=development&& electron --debug-brk=5000 ./main.js",
-    "http": "http-server dist/ -p 8080",
+    "electron-start": "set NODE_ENV=development&& electron --debug-brk=5000 ./app/main.js",
+    "http": "http-server dist/ -p 8081",
     "http-evidence_bak": "http-server ../bqj-client-edition/release/ -p 8080",
     "http-evidence": "http-server ../nsis_setup_skin/Output/ -p 8080"
   },
   "devDependencies": {
-    "electron": "^1.7.9",
-    "electron-builder": "^19.43.3"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-import": "^1.6.2",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "ejs": "^2.5.7",
+    "ejs-loader": "^0.3.0",
+    "electron": "^1.8.3",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "less": "^3.0.1",
+    "less-loader": "^4.0.5",
+    "npm-run-all": "^4.1.2",
+    "postcss": "^6.0.14",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.9.1",
+    "webpack-dev-server": "^2.9.5"
   },
   "dependencies": {
+    "antd": "^2.13.11",
     "electron-log": "^1.3.0",
+    "electron-progressbar": "^1.0.2",
     "electron-updater": "^2.18.2",
     "http-server": "^0.11.1",
-    "log4js": "^2.5.3"
+    "log4js": "^2.5.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   },
   "build": {
     "publish": [
       {
         "provider": "generic",
-        "url": "http://127.0.0.1:8080/"
+        "url": "http://127.0.0.1:8081/"
       }
     ],
     "appId": "com.github.iffy.electronupdaterexample",
@@ -44,6 +71,7 @@
       "allowToChangeInstallationDirectory": true
     },
     "directories": {
+      "buildResources": "log/*",
       "output": "./dist"
     }
   }

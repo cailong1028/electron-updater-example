@@ -13,7 +13,9 @@ class AppUpdater{
     }
 
     constructor(){
-        let sendStatusToWindow = global.sendStatusToWindow;
+        let sendStatusToWindow = (text) => {
+            global.win.webContents.send('message', text);
+        };
         autoUpdater.on('checking-for-update', () => {
             sendStatusToWindow('Checking for update...');
         })

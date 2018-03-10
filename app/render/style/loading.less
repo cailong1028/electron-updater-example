@@ -1,0 +1,104 @@
+@baseColor: #ffd800;
+.update {
+    transition: all 0.3s;
+    .update-mask {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        //background-color: #373737;
+        //background-color: rgba(55, 55, 55, 0.6);
+        height: 100%;
+        z-index: 1000;
+    }
+    .update-loading-container {
+        position: fixed;
+        overflow: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        -webkit-overflow-scrolling: touch;
+        outline: 0;
+        color: black;
+        font-size: 14px;
+        letter-spacing: 2px;
+        line-height: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .update-loading-wrap {
+            width: 50%;
+            border: 2px solid rgb(212,212,212);
+            .update-loading-wrap-title{
+                font-weight: bolder;
+                padding-left: 14px;
+            }
+            .update-loading-wrap-message{
+                text-align: center;
+                font-weight: bolder;
+                padding-left: 14px;
+            }
+            .update-loading-process-bar {
+                text-align: center;
+                width: 80%;
+                background: rgb(240, 240, 240);
+                border-radius: 5px;
+                height: 10px;
+                margin: auto;
+                margin-bottom: 10px;
+                .update-loading-process-bar-inner {
+                    border-radius: 5px;
+                    height: 100%;
+                    background: @baseColor;
+                }
+            }
+            .update-loading-wrap-number{
+                text-align: center;
+            }
+        }
+    }
+    .update-available-container {
+        position: fixed;
+        overflow: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        -webkit-overflow-scrolling: touch;
+        outline: 0;
+        color: black;
+        font-size: 14px;
+        letter-spacing: 2px;
+        line-height: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .update-available-wrap {
+            width: 33%;
+            border: 2px solid rgb(212,212,212);
+            .update-available-wrap-title{
+                font-weight: bolder;
+                padding-left: 14px;
+            }
+            .update-available-wrap-message{
+                text-align: center;
+                font-weight: bolder;
+                padding-left: 14px;
+            }
+            .update-available-button {
+                cursor:pointer;
+                background: @baseColor;
+                margin: auto;
+                margin-bottom: 10px;
+                width: 40%;
+                border-radius: 4px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+    }
+}
