@@ -4,33 +4,45 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var date = function (_require) {
-	_inherits(date, _require);
+	(0, _inherits3.default)(date, _require);
 
 	function date() {
-		_classCallCheck(this, date);
-
-		return _possibleConstructorReturn(this, (date.__proto__ || Object.getPrototypeOf(date)).apply(this, arguments));
+		(0, _classCallCheck3.default)(this, date);
+		return (0, _possibleConstructorReturn3.default)(this, (date.__proto__ || (0, _getPrototypeOf2.default)(date)).apply(this, arguments));
 	}
 
-	_createClass(date, null, [{
+	(0, _createClass3.default)(date, null, [{
 		key: 'type',
 		get: function get() {
 			return 'control.date';
 		}
 	}]);
-
 	return date;
 }(require('../control'));
 
 exports.default = date;
 module.exports = exports['default'];
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uL3NyYy9vcGVueG1sL2RvY3gvbW9kZWwvY29udHJvbC9kYXRlLmpzIl0sIm5hbWVzIjpbImRhdGUiLCJyZXF1aXJlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7OztJQUFxQkEsSTs7Ozs7Ozs7Ozs7c0JBQ0g7QUFDaEIsVUFBTyxjQUFQO0FBQ0E7Ozs7RUFIZ0NDLFFBQVEsWUFBUixDOztrQkFBYkQsSSIsImZpbGUiOiJkYXRlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgY2xhc3MgZGF0ZSBleHRlbmRzIHJlcXVpcmUoJy4uL2NvbnRyb2wnKXtcclxuXHRzdGF0aWMgZ2V0IHR5cGUoKXtcclxuXHRcdHJldHVybiAnY29udHJvbC5kYXRlJ1xyXG5cdH1cclxufVxyXG4iXX0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uL3NyYy9vcGVueG1sL2RvY3gvbW9kZWwvY29udHJvbC9kYXRlLmpzIl0sIm5hbWVzIjpbImRhdGUiLCJyZXF1aXJlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBQXFCQSxJOzs7Ozs7Ozs7O3NCQUNIO0FBQ2hCLFVBQU8sY0FBUDtBQUNBOzs7RUFIZ0NDLFFBQVEsWUFBUixDOztrQkFBYkQsSSIsImZpbGUiOiJkYXRlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgY2xhc3MgZGF0ZSBleHRlbmRzIHJlcXVpcmUoJy4uL2NvbnRyb2wnKXtcclxuXHRzdGF0aWMgZ2V0IHR5cGUoKXtcclxuXHRcdHJldHVybiAnY29udHJvbC5kYXRlJ1xyXG5cdH1cclxufVxyXG4iXX0=

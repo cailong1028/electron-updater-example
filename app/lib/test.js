@@ -75,7 +75,10 @@ function txt(){
 }
 
 function docx(filePath){
+    //开发引用项目
     const convert = require('../../../docx2html/test/testImg');
+    //打包引用本地
+    // const convert = require('../vendor/docx2html/test/testImg');
     convert(filePath)
     .then(htmlPath => {
         screenshot({url: htmlPath, dimensions: ['1024x768'], dest: path.resolve(__dirname, './dd')});
