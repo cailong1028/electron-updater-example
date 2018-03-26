@@ -4,6 +4,12 @@ const ProgressBar = require('electron-progressbar');
 const {autoUpdater} = require("electron-updater");
 const log4js = require('log4js');
 
+const screenshot = require('./lib/screenshot');
+
+ipcMain.on('screenshot', url => {
+    screenshot(url);
+});
+
 log4js.configure({
     appenders: {
         fileLogs: {
@@ -120,6 +126,7 @@ function progressBarShow(){
 
 app.on('ready', function () {
     // Create the Menu
+
     const appUpdater = new AppUpdater();
 
     if (process.platform === 'darwin') {
@@ -221,6 +228,11 @@ app.on('ready', function () {
     });
     //加载home component
     // win.webContents.loadURL('http://www.baidu.com');
+
+    const {screen} = require('electron');
+    const {width, height} = screen.getPrimaryDisplay().workAreaSize;
+    console.log(`workAreaSize ${width} * ${height}`);
+
 });
 app.on('window-all-closed', () => {
     app.quit();
